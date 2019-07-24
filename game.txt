@@ -1,10 +1,66 @@
 Let's make a game!
   name:Science Clicker
+  by:Whatever
+  desc:This is a simple idle game
+  created:24/07/2019
+  updated:24/07/2019
+  version:0
+
+
+
+Settings
+  background:stuff/meadow.jpg
+  building cost increase:115%
+  building cost refund:50%
+  spritesheet:icons, 48 by 48, stuff/bunnyIcons.png
+  stylesheet:stuff/bigBlue.css
+
+
+Buttons
+  *bunnyButton
+    name:Make a bunny
+    desc:Click this little bunny to get more bunnies!
+    on click:anim icon wobble
+    on click:yield 1 bunny
+    icon:stuff/bunny.png
+    no text
+    class:bigButton hasFlares
+    icon class:shadowed
+    tooltip origin:bottom
+    tooltip class:red
+
+Layout
+  use default
+
+
+Buttons
+  *scienceButton
+    name:Make science
+    desc:Click
+    on click:anim icon wobble
+    on click:yield 1 science
+//  icon:stuff/bunny.png
+    no text
+    class:bigButton hasFlares
+    icon class:shadowed
+    tooltip origin:bottom
+    tooltip class:red
+
 
 Resources
-  *pie
-    name:Pie
-    desc:A delicious pie.
+  *bunny|Bunnies
+    name:Bunny|Bunnies
+    desc:These are your bunnies. You can use them to purchase things. Your goal is to have as many bunnies as possible!
+    icon:icons[0,0]
+    class:noBackground
+    show earned
+  *science|science
+    name:science|science
+    desc:These are your bunnies. You can use them to purchase things. Your goal is to have as many bunnies as possible!
+    icon:icons[0,0]
+    class:noBackground
+    show earned
+    
 
 Upgrades
   *applePieRecipe
