@@ -42,9 +42,15 @@ Resources
     class:noBackground
     show earned
   *science|science
-    name:science|science
-    desc:This is your science. You can use them to purchase things. Your goal is to have as many bunnies as possible!
+    name:Science|Science
+    desc:This is your science. You can use them to purchase things. Your goal is to have as much Science as possible!
     icon:cookieicons[19,0]
+    class:noBackground
+    show earned
+  *coin|coins
+    name:Coin|Coins
+    desc:This is your money. You can use them to purchase things.
+    icon:https://raw.githubusercontent.com/L4in/ScienceIdle/master/images/coin.png
     class:noBackground
     show earned
     
@@ -71,6 +77,14 @@ Shinies
 Buildings
   *TEMPLATE
     on click:anim glow
+
+  *mouse|mice
+    name:Laboratory Mouse|Laboratory Mice
+    desc:A small mouse. <//><b>Effect:</b><.>Produces 1 science every 10 seconds.
+    icon:https://raw.githubusercontent.com/L4in/ScienceIdle/master/images/mouse.png
+    cost:5 science
+    on tick:yield 0.1 science
+    unlocked
 
   *intern|intern
     name:Unpaid Intern|Unpaid Intern
