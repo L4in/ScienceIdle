@@ -190,14 +190,14 @@ Achievements
     name:You wrote a paper
     desc:Have <b>100</b> science.
     req:100 science
-    on earn:grant 10 coins
+    on earn:yield 10 coins
     icon:https://raw.githubusercontent.com/L4in/ScienceIdle/master/images/scroll.png
 
   *conference
     name:You published in a conference
     desc:Have <b>1000</b> science.
     req:1000 science
-    on earn:grant 1000 coins
+    on earn:yield 1000 coins
     icon:https://raw.githubusercontent.com/L4in/ScienceIdle/master/images/scroll.png
 
     
