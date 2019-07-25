@@ -56,13 +56,12 @@ Resources
     
 
 Upgrades
-  *applePieRecipe
-    name:Apple pie recipe
-    desc:Unlocks the ability to make apple pies!
-    
-  *cherryPieRecipe
-    name:Cherry pie recipe
-    desc:Boy, you'll never guess!
+  *blackBoard
+    name:Black Board
+    desc:You now have a black board, to write things !
+    cost:10 coins
+    passive:multiply yield of scienceButton by 1.5
+
 
 Shinies
   *luckyBunny
@@ -90,27 +89,29 @@ Buildings
     name:Unpaid Intern|Unpaid Intern
     desc:A young Unpaid Intern<//><b>Effect:</b><.>Produces 1 science every 10 seconds.
     cost:5 science
-    on tick:yield 0.1 science
+    on tick:yield 0.5 science
     unlocked
 
   *mts|mts
     name:Master thesis student|Master thesis students
     desc:A young Master Thesis Student<//><b>Effect:</b><.>Produces 1 science every 10 seconds.
     cost:15 science
-    on tick:yield 0.1 science
-    req:600 science:earned
+    on tick:yield 1 science
+    req:100 science:earned
 
   *phd|phd
     name:PHD student|PHD students
     desc:A young PHD Student<//><b>Effect:</b><.>Produces 1 science per second.
     cost:100 science, 1 mts
-    on tick:yield 1 science
+    on tick:yield 10 science
+    req:500 science:earned
 
   *postdoc|postdoc
     name:Postdoc|Postdocs
     desc:A young PHD Student<//><b>Effect:</b><.>Produces 10 science per second.
     cost:1000 science, 1 phd
-    on tick:yield 10 science
+    on tick:yield 20 science
+    req:1000 science:earned
 
 
     
@@ -189,14 +190,14 @@ Achievements
   *paper
     name:You wrote a paper
     desc:Have <b>100</b> science.
-    req:100 science
+    req:100 science:earned
     on earn:yield 10 coins
     icon:https://raw.githubusercontent.com/L4in/ScienceIdle/master/images/scroll.png
 
   *conference
     name:You published in a conference
     desc:Have <b>1000</b> science.
-    req:1000 science
+    req:1000 science:earned
     on earn:yield 1000 coins
     icon:https://raw.githubusercontent.com/L4in/ScienceIdle/master/images/scroll.png
 
