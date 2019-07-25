@@ -9,32 +9,21 @@ Let's make a game!
 
 
 Settings
-  background:stuff/meadow.jpg
+  background:https://raw.githubusercontent.com/L4in/ScienceIdle/master/images/space.jpg
   building cost increase:115%
   building cost refund:50%
   spritesheet:icons, 48 by 48, stuff/bunnyIcons.png
+  spritesheet:cookieicons, 48 by 48, https://raw.githubusercontent.com/L4in/ScienceIdle/master/images/3jNJJNw.png
   stylesheet:stuff/bigBlue.css
 
 
 Buttons
-  *bunnyButton
-    name:Make a bunny
-    desc:Click this little bunny to get more bunnies!
-    on click:anim icon wobble
-    on click:yield 1 bunny
-    icon:stuff/bunny.png
-    no text
-    class:bigButton hasFlares
-    icon class:shadowed
-    tooltip origin:bottom
-    tooltip class:red
-
   *scienceButton
     name:Make science
     desc:Click
     on click:anim icon wobble
     on click:yield 1 science
-//  icon:stuff/bunny.png
+    icon:https://raw.githubusercontent.com/L4in/ScienceIdle/master/images/science.png
     no text
     class:bigButton hasFlares
     icon class:shadowed
@@ -54,8 +43,8 @@ Resources
     show earned
   *science|science
     name:science|science
-    desc:These are your bunnies. You can use them to purchase things. Your goal is to have as many bunnies as possible!
-    icon:icons[0,0]
+    desc:This is your science. You can use them to purchase things. Your goal is to have as many bunnies as possible!
+    icon:cookieicons[19,0]
     class:noBackground
     show earned
     
@@ -83,8 +72,29 @@ Buildings
   *TEMPLATE
     on click:anim glow
 
+  *intern|intern
+    name:Unpaid Intern|Unpaid Intern
+    desc:A young Unpaid Intern<//><b>Effect:</b><.>Produces 1 science every 10 seconds.
+    cost:5 science
+    on tick:yield 0.1 science
+    unlocked
+
+  *postdoc|postdoc
+    name:Postdoc|Postdocs
+    desc:A young PHD Student<//><b>Effect:</b><.>Produces 10 science per second.
+    cost:1000 science, 1 phd
+    on tick:yield 10 science
+    unlocked
+
+  *phd|phd
+    name:PHD student|PHD students
+    desc:A young PHD Student<//><b>Effect:</b><.>Produces 1 science per second.
+    cost:100 science, 1 mts
+    on tick:yield 1 science
+    unlocked
+
   *mts|mts
-    name:Master thesis student|Master thesis student
+    name:Master thesis student|Master thesis students
     desc:A young Master Thesis Student<//><b>Effect:</b><.>Produces 1 science every 10 seconds.
     cost:15 science
     on tick:yield 0.1 science
@@ -177,22 +187,6 @@ Achievements
     desc:Have <b>1000000</b> bunnies.
     req:10000000 bunnies
     icon:icons[2,4] icons[0,4] icons[0,6]
-    
-  *clickAchiev1
-    name:That tickles
-    desc:Click the bunny <b>10</b> times.
-    req:10 bunnyButton clicks
-    icon:icons[2,2] icons[0,2] icons[0,6]
-  *clickAchiev2
-    name:Don't squeeze me I'll fart
-    desc:Click the bunny <b>100</b> times.
-    req:100 bunnyButton clicks
-    icon:icons[2,2] icons[0,3] icons[0,6]
-  *clickAchiev3
-    name:You're cruising for a bruising, dude
-    desc:Click the bunny <b>2000</b> times.
-    req:2000 bunnyButton clicks
-    icon:icons[2,2] icons[0,4] icons[0,6]
     
   *bunnyPsAchiev1
     name:Be vewy vewy quiet
