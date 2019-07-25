@@ -93,26 +93,26 @@ Buildings
     on tick:yield 0.1 science
     unlocked
 
-  *postdoc|postdoc
-    name:Postdoc|Postdocs
-    desc:A young PHD Student<//><b>Effect:</b><.>Produces 10 science per second.
-    cost:1000 science, 1 phd
-    on tick:yield 10 science
-    unlocked
+  *mts|mts
+    name:Master thesis student|Master thesis students
+    desc:A young Master Thesis Student<//><b>Effect:</b><.>Produces 1 science every 10 seconds.
+    cost:15 science
+    on tick:yield 0.1 science
+    req:600 science:earned
 
   *phd|phd
     name:PHD student|PHD students
     desc:A young PHD Student<//><b>Effect:</b><.>Produces 1 science per second.
     cost:100 science, 1 mts
     on tick:yield 1 science
-    unlocked
 
-  *mts|mts
-    name:Master thesis student|Master thesis students
-    desc:A young Master Thesis Student<//><b>Effect:</b><.>Produces 1 science every 10 seconds.
-    cost:15 science
-    on tick:yield 0.1 science
-    unlocked
+  *postdoc|postdoc
+    name:Postdoc|Postdocs
+    desc:A young PHD Student<//><b>Effect:</b><.>Produces 10 science per second.
+    cost:1000 science, 1 phd
+    on tick:yield 10 science
+
+
     
   *cage|cages
     name:Rabbit cage|Rabbit cages
@@ -185,6 +185,14 @@ Buildings
 Achievements
   *TEMPLATE
     on click:anim glow
+
+  *paper
+    name:You wrote a paper
+    desc:Have <b>100</b> science.
+    req:100 science
+    on click:yield 10 coins
+    icon:https://raw.githubusercontent.com/L4in/ScienceIdle/master/images/scroll.png
+
     
   *bunnyAchiev1
     name:Run rabbit run
